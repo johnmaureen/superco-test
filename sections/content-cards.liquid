@@ -1,0 +1,100 @@
+<section class="content-cards">
+  <div class="container mx-auto">
+    <div class="card-items grid grid-cols-4 gap-[10px]">
+
+      {% render 'card-item' for section.blocks as block %}
+
+    </div><!-- card-items -->
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Content Cards",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "card_item",
+      "name": "Card Item",
+      "settings": [
+        {
+          "type": "radio",
+          "id": "bg_type",
+          "label": "Background Type",
+          "default": "contain",
+          "options": [
+            {
+              "value": "contain",
+              "label": "Contain"
+            },
+            {
+              "value": "covered",
+              "label": "Covered"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "Card Title",
+          "placeholder": "Card Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Card Content Placeholder</p>"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label"
+        },
+        {
+          "type": "header",
+          "content": "Text Rendering Settings"
+        },
+        {
+          "type": "radio",
+          "id": "text_colour",
+          "label": "Text Color",
+          "default": "dark",
+          "options": [
+            {
+              "value": "dark",
+              "label": "Dark"
+            },
+            {
+              "value": "light",
+              "label": "Light"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content Cards",
+      "name":"Content Cards"
+    }
+ ]
+}
+{% endschema %}

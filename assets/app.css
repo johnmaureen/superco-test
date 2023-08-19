@@ -488,44 +488,48 @@ video {
 .container {
   width: 100%;
 }
-@media (min-width: 640px) {
+@media (min-width: 1358px) {
 
   .container {
-    max-width: 640px;
-  }
-}
-@media (min-width: 768px) {
-
-  .container {
-    max-width: 768px;
-  }
-}
-@media (min-width: 1024px) {
-
-  .container {
-    max-width: 1024px;
-  }
-}
-@media (min-width: 1280px) {
-
-  .container {
-    max-width: 1280px;
-  }
-}
-@media (min-width: 1536px) {
-
-  .container {
-    max-width: 1536px;
+    max-width: 1358px;
   }
 }
 .fixed {
   position: fixed;
 }
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
 .sticky {
   position: sticky;
 }
+.left-0 {
+  left: 0px;
+}
+.top-0 {
+  top: 0px;
+}
 .isolate {
   isolation: isolate;
+}
+.m-auto {
+  margin: auto;
+}
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+.mb-\[30px\] {
+  margin-bottom: 30px;
+}
+.mb-\[10px\] {
+  margin-bottom: 10px;
+}
+.mb-\[16px\] {
+  margin-bottom: 16px;
 }
 .block {
   display: block;
@@ -542,24 +546,62 @@ video {
 .hidden {
   display: none;
 }
+.h-full {
+  height: 100%;
+}
+.w-full {
+  width: 100%;
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
 .flex-wrap {
   flex-wrap: wrap;
+}
+.gap-\[10px\] {
+  gap: 10px;
 }
 .truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.bg-blue-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+.bg-cover {
+  background-size: cover;
 }
-.text-lg {
-  font-size: 1.125rem;
-  line-height: 1.75rem;
+.bg-center {
+  background-position: center;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.p-\[10px\] {
+  padding: 10px;
+}
+.pb-72 {
+  padding-bottom: 18rem;
+}
+.pb-\[72\%\] {
+  padding-bottom: 72%;
+}
+.text-center {
+  text-align: center;
+}
+.text-\[32px\] {
+  font-size: 32px;
+}
+.text-\[14px\] {
+  font-size: 14px;
+}
+.text-\[12px\] {
+  font-size: 12px;
+}
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 .uppercase {
   text-transform: uppercase;
@@ -569,6 +611,18 @@ video {
 }
 .italic {
   font-style: italic;
+}
+.leading-\[18px\] {
+  line-height: 18px;
+}
+.tracking-wide {
+  letter-spacing: 0.025em;
+}
+.tracking-\[0\.25em\] {
+  letter-spacing: 0.25em;
+}
+.underline {
+  text-decoration-line: underline;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);

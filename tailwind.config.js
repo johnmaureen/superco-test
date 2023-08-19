@@ -11,6 +11,9 @@ module.exports = {
     "./templates/customers/*.liquid"
   ],
   theme: {
+    screens: {
+      xl: '1358px'
+    },
     extend: {},
   },
   plugins: [],
