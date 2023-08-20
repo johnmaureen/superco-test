@@ -1,6 +1,6 @@
 <section class="content-cards py-10">
-  <div class="container mx-auto">
-    <div class="card-items grid grid-cols-{{ section.settings.col_count }} gap-[10px]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="card-items grid sm:grid-cols-2 lg:grid-cols-{{ section.settings.col_count }} gap-[10px]">
 
       {% render 'card-item' for section.blocks as block %}
 

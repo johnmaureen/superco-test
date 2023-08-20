@@ -12,9 +12,9 @@
 	{% if block.settings.padding == 'sm' %}
     text-[16px]
   {% elsif block.settings.title_size == 'md' %}
-    text-[32px]
+    text-[18px] sm:text-[24px] lg:text-[32px]
     {% elsif block.settings.title_size == 'lg' %}
-    text-[64px]
+    text-[24px]  sm:text-32px] lg:text-[64px]
   {% endif %}
 {%- endcapture -%}
 
@@ -27,20 +27,21 @@
 
 {%- comment -%} Card item padding {%- endcomment -%}
 {%- capture padding -%}
-	{% if block.settings.padding == 'tight' %} p-[10px] {% else %} p-10 {% endif %}
+	{% if block.settings.padding == 'tight' %} p-[10px] pb-16 {% else %} p-10 pb-16 {% endif %}
 {%- endcapture -%}
 
-
-<div class="bg-no-repeat bg-center bg-cover {{ padding }}" style="{{ background }}">
+ 
+<div class="bg-no-repeat bg-center bg-cover {{- padding -}} 
+	 {%- if block.settings.bg_type == 'covered' -%} pt-[70%] flex items-end {%- endif -%}" 
+	 style="{{ background }}">
 
 	{%- if block.settings.bg_type == 'contain' -%}
 		<div class="card-image block bg-no-repeat bg-center bg-cover mb-[30px] pb-[72%] w-full" style="background-image: url({{ block.settings.bg_image | img_url: 'master'}})"></div>
 	{%- endif -%}
-	
 
 	<div class="card-content text-center max-w-[615px] mx-auto {{ text_color }}">
 		{%- if block.settings.title != blank -%}
-			<h3 class="mb-[10px] {{ text_color }} {{ title_size }}">{{ block.settings.title }}</h3>
+			<h3 class="mb-[10px] {{ text_color }} {{ title_size }} ">{{ block.settings.title }}</h3>
 		{%- endif -%}
 
 		{%- if block.settings.content != blank -%}
