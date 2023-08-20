@@ -1,6 +1,6 @@
-<section class="content-cards">
+<section class="content-cards py-10">
   <div class="container mx-auto">
-    <div class="card-items grid grid-cols-4 gap-[10px]">
+    <div class="card-items grid grid-cols-{{ section.settings.col_count }} gap-[10px]">
 
       {% render 'card-item' for section.blocks as block %}
 
@@ -8,10 +8,22 @@
   </div>
 </section>
 
+
 {% schema %}
 {
   "name": "Content Cards",
-  "settings": [],
+  "settings": [
+    {
+      "type": "range",
+      "id": "col_count",
+      "label": "Number of Columns",
+      "unit": "col",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    }
+  ],
   "blocks": [
     {
       "type": "card_item",
@@ -37,6 +49,22 @@
           "type": "image_picker",
           "id": "bg_image",
           "label": "Background Image"
+        },
+        {
+          "type": "radio",
+          "id": "padding",
+          "label": "Padding",
+          "default": "tight",
+          "options": [
+            {
+              "value": "tight",
+              "label": "Tight"
+            },
+            {
+              "value": "loose",
+              "label": "Loose"
+            }
+          ]
         },
         {
           "type": "color",
@@ -86,6 +114,26 @@
               "label": "Light"
             }
           ]
+        },
+        {
+          "type": "select",
+          "id": "title_size",
+          "label": "Title Size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "md"
         }
       ]
     }
