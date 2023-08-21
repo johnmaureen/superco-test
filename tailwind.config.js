@@ -11,7 +11,12 @@ module.exports = {
     "./templates/customers/*.liquid"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        GT: ['GT-Super',  'sans-serif'],
+        Platform: ['Platform', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
