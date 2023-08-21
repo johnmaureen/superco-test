@@ -6,8 +6,14 @@
     {% endif %}
 
     <div class="featured-product__items grid sm:grid-cols-2 lg:grid-cols-3 gap-[1px]">
-        {% render 'featured-product-item' for section.blocks as block %}
+      {% render 'featured-product-item' for section.blocks as block %}
     </div><!-- featured-product__items -->
+
+    {%- if section.settings.link_url != blank and section.settings.link_label != blank -%}
+      <a href="{{ section.settings.link_url }}" class="font-Platform font-medium text-black block text-center underline uppercase tracking-[0.25em]">
+        {{ section.settings.link_label }}
+      </a>
+    {%- endif -%}
 
   </div>
 </section>
