@@ -17,7 +17,12 @@ module.exports = {
       lg: '1024px',
       xl: '1398px'
     },
-    extend: {},
+    extend: {
+      fontFamily: {
+        GT: ['GT-Super',  'sans-serif'],
+        Platform: ['Platform', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
