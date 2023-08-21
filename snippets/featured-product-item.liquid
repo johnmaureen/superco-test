@@ -1,0 +1,14 @@
+{% assign product = block.settings.product %}
+
+<div class="product-item">
+
+    <a href="{{ product.url }}" class="block h-[81%] w-full">
+        <img class="object-cover h-full w-full" src="{{ product.featured_image.src | img_url: 'master' }}" alt="{{ product.featured_image.alt | escape }}">
+	</a>
+
+    <div class="flex justify-between items-center p-5">
+        <h3 class="text-24 italic font-normal leading-32 tracking-normal">{{ product.title }}</h3>
+        <p class="text-14 font-normal leading-14 tracking-wider">{{ product.price | money }}</p>
+    </div>
+
+</div>
