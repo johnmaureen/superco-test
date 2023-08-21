@@ -1,0 +1,148 @@
+<section class="content-cards py-10">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="card-items grid sm:grid-cols-2 lg:grid-cols-{{ section.settings.col_count }} gap-[10px]">
+
+      {% render 'card-item' for section.blocks as block %}
+
+    </div><!-- card-items -->
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Content Cards",
+  "settings": [
+    {
+      "type": "range",
+      "id": "col_count",
+      "label": "Number of Columns",
+      "unit": "col",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 4
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card_item",
+      "name": "Card Item",
+      "settings": [
+        {
+          "type": "radio",
+          "id": "bg_type",
+          "label": "Background Type",
+          "default": "contain",
+          "options": [
+            {
+              "value": "contain",
+              "label": "Contain"
+            },
+            {
+              "value": "covered",
+              "label": "Covered"
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "bg_image",
+          "label": "Background Image"
+        },
+        {
+          "type": "radio",
+          "id": "padding",
+          "label": "Padding",
+          "default": "tight",
+          "options": [
+            {
+              "value": "tight",
+              "label": "Tight"
+            },
+            {
+              "value": "loose",
+              "label": "Loose"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "textarea",
+          "id": "title",
+          "label": "Title",
+          "default": "Card Title",
+          "placeholder": "Card Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Card Content Placeholder</p>"
+        },
+        {
+          "type": "url",
+          "id": "link_url",
+          "label": "Link URL"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label"
+        },
+        {
+          "type": "header",
+          "content": "Text Rendering Settings"
+        },
+        {
+          "type": "radio",
+          "id": "text_colour",
+          "label": "Text Color",
+          "default": "dark",
+          "options": [
+            {
+              "value": "dark",
+              "label": "Dark"
+            },
+            {
+              "value": "light",
+              "label": "Light"
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "title_size",
+          "label": "Title Size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "md",
+              "label": "Medium"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "md"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Content Cards",
+      "name":"Content Cards"
+    }
+ ]
+}
+{% endschema %}
