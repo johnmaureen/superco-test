@@ -1,4 +1,5 @@
 // Importing functions or variables from moduleA
-import { sliderInit } from './components/featuredProduct.js';
+import * as featuredProduct from './components/featuredProduct.js';
 
-sliderInit()
+featuredProduct.sliderInit()
+featuredProduct.addToCart()

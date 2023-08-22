@@ -56,3 +56,40 @@ export function sliderInit() {
 
 
 }
+
+// Add product to cart
+export function addToCart() {
+  
+  const products = document.querySelectorAll('.product-item')
+  if (products) {
+    
+    products.forEach(product => {
+      product.addEventListener('click', e => {
+
+        const id = product.dataset.id
+        let formData = {
+          'items': [{
+            'id': id,
+            'quantity': 1
+          }]
+        };
+
+        $.ajax({
+          url: `/cart/add.js`,
+          type: 'POST',
+          dataType: 'json',
+          data: formData,
+          success: function (response) {
+            console.log(`${ response.items[0].title } has been added to cart:`);
+          },
+          error: function (xhr, status, error) {
+            console.error('Failed to add product to cart:', error);
+          },
+        });
+
+      })
+    })
+
+  }
+
+}

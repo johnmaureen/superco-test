@@ -1,14 +1,14 @@
 {% assign product = block.settings.product %}
 
-<div class="product-item">
+<div class="product-item" data-id="{{ product.first_available_variant.id }}">
 
-    <a href="{{ product.url }}" class="block h-[81%] w-full">
+    <div class="block h-[81%] w-full">
         <div class="product-image block bg-no-repeat bg-center bg-cover h-full w-full pb-[70%]" alt="{{ product.featured_image.alt | escape }}" style="background-image: url({{ product.featured_image.src | img_url: 'master' }})"></div>
-	</a>
+	</div>
 
-    <div class="flex justify-between items-start p-5">
+    <div class="flex justify-between items-start p-5 bg-white">
         <h3 class="product-title font-GT text-[24px] italic font-normal leading-32 tracking-normal pr-5">{{ product.title }}</h3>
-        <p class="font-Platform text-[14px] font-normal leading-14 tracking-widest text-black">{{ product.price | money }}</p>
+        <p class="font-Platform text-[14px] font-normal mt-2     leading-14 tracking-widest text-black">{{ product.price | money }}</p>
     </div>
 
 </div>
