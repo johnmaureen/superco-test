@@ -1,5 +1,7 @@
-<section class="content-cards py-10">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<section class="content-cards py-16 {{ section.settings.layout }} bg-[{{ section.settings.bg_color }}]">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8
+    {% if section.settings.layout == 'slider' %} pl-2 pr-0 {% endif %}
+  ">
     <div class="card-items grid sm:grid-cols-2 lg:grid-cols-{{ section.settings.col_count }} gap-[10px]">
 
       {% render 'card-item' for section.blocks as block %}
@@ -8,11 +10,16 @@
   </div>
 </section>
 
-
 {% schema %}
 {
   "name": "Content Cards",
   "settings": [
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F4EDE5"
+    },
     {
       "type": "range",
       "id": "col_count",
@@ -22,6 +29,23 @@
       "max": 4,
       "step": 1,
       "default": 4
+    },
+    {
+      "type": "radio",
+      "id": "layout",
+      "label": "Responsive Layout",
+      "default": "stacked",
+      "info": "Responsive layout in smaller viewports",
+      "options": [
+        {
+          "value": "slider",
+          "label": "Slider"
+        },
+        {
+          "value": "stacked",
+          "label": "Stacked"
+        }
+      ]
     }
   ],
   "blocks": [

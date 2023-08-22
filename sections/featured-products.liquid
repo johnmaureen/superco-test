@@ -1,4 +1,4 @@
-<section class="featured-products  pt-10 pb-32 overflow-hidden {% if section.settings.bg_color != blank %} bg-[#F4EDE5] {% endif %}">
+<section class="featured-products  pt-10 pb-32 overflow-hidden bg-[{{ section.settings.bg_color }}]">
   
   <div class="container mx-auto sm:px-0 lg:px-8">
 
@@ -28,7 +28,7 @@
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
-      "default": "#fff"
+      "default": "#F4EDE5"
     },
     {
       "type": "text",

@@ -1,0 +1,16 @@
+.content-cards {
+
+  .slick-list {
+    @include breakpoint(560px) {
+      padding-right: 90px;
+    }
+  }
+
+  .slick-slider {
+    .slick-slide {
+      @include breakpoint(1024px) {
+        margin: 0 5px;
+      }
+    }
+  }
+}
