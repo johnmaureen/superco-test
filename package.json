@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/johnmaureen/superco-test/issues"
   },
-  "homepage": "https://github.com/johnmaureen/superco-test#readme"
+  "homepage": "https://github.com/johnmaureen/superco-test#readme",
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0"
+  }
 }
