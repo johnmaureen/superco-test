@@ -1,8 +1,11 @@
-@import 'fonts';
 
-// Libraries
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
-@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+// Globals
+@import 'fonts';
+@import 'mixins';
+
+
+// Components
+@import './components/featuredProduct.scss';
 
 @tailwind base;
 @tailwind components;

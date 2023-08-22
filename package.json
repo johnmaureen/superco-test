@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/johnmaureen/superco-test#readme",
   "dependencies": {
-    "@glidejs/glide": "^3.6.0"
+    "jquery": "^3.7.0",
+    "slick-carousel": "^1.8.1"
   }
 }
