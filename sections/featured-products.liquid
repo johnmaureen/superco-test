@@ -1,9 +1,9 @@
-<section class="featured-products  pt-10 pb-32 overflow-hidden {% if section.settings.bg_color != blank %} bg-[{{ section.settings.bg_color }}] {% endif %}">
+<section class="featured-products  pt-10 pb-32 overflow-hidden {% if section.settings.bg_color != blank %} bg-[#F4EDE5] {% endif %}">
   
   <div class="container mx-auto sm:px-0 lg:px-8">
 
     {% if section.settings.heading != blank %}
-      <h2 class="text-[80px] font-normal leading-80 tracking-normal text-center pb-14">{{ section.settings.heading }}</h2>
+      <h2 class="font-GT text-[80px] uppercase font-normal leading-80 tracking-normal text-center pb-14">{{ section.settings.heading }}</h2>
     {% endif %}
 
     <div class="featured-product__items  {% unless section.blocks.size > 3 %} grid gap-[1px] sm:grid-cols-2 md:grid-cols-3 {% endunless %}">

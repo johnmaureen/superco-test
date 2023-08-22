@@ -9,8 +9,14 @@
       }
     }
 
+    .slick-track {
+      display: flex;
+    }
+
     .slick-slide {
       margin: 0 0.5px;
+      height: inherit;
+      background-color: #fff;
       @include breakpoint(768px) {
         margin: 0 4px;
       }
