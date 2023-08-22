@@ -1,0 +1,23 @@
+.featured-products {
+
+  .slick-slider {
+
+    .slick-list {
+      @include breakpoint(768px) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
+
+    .slick-slide {
+      margin: 0 0.5px;
+      @include breakpoint(768px) {
+        margin: 0 4px;
+      }
+
+      img {
+        max-height: 313px;
+      }
+    }
+  }
+}

@@ -3,11 +3,11 @@
 <div class="product-item">
 
     <a href="{{ product.url }}" class="block h-[81%] w-full">
-        <img class="object-cover h-full w-full" src="{{ product.featured_image.src | img_url: 'master' }}" alt="{{ product.featured_image.alt | escape }}">
+        <div class="product-image block bg-no-repeat bg-center bg-cover h-full w-full pb-[70%]" alt="{{ product.featured_image.alt | escape }}" style="background-image: url({{ product.featured_image.src | img_url: 'master' }})"></div>
 	</a>
 
     <div class="flex justify-between items-start p-5">
-        <h3 class="font-GT text-[24px] italic font-normal leading-32 tracking-normal pr-5">{{ product.title }}</h3>
+        <h3 class="product-title font-GT text-[24px] italic font-normal leading-32 tracking-normal pr-5">{{ product.title }}</h3>
         <p class="font-Platform text-[14px] font-normal leading-14 tracking-widest text-black">{{ product.price | money }}</p>
     </div>
 

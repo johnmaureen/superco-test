@@ -1,1 +1,4 @@
-import { featuredProduct } from './featuredProduct.js' 
+// Importing functions or variables from moduleA
+import { sliderInit } from './components/featuredProduct.js';
+
+sliderInit()
