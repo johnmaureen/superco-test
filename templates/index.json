@@ -1,1 +1,172 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Browse our latest products","heading_size":"h0"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","button"],"settings":{"image_overlay_opacity":40,"image_height":"large","desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"inverse","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":false,"columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}}},"order":["image_banner","featured_collection"]}
+{
+    "sections": {
+      "ba7fca7e-5c3c-4bae-bcee-56792da7bd35": {
+        "type": "content-cards",
+        "blocks": {
+          "8610dbb8-f450-4c97-85f4-bf575d3cbed2": {
+            "type": "card_item",
+            "settings": {
+              "bg_type": "contain",
+              "bg_image": "shopify:\/\/shop_images\/img1.jpg",
+              "padding": "tight",
+              "bg_color": "#00966e",
+              "title": "Make a scene.",
+              "content": "<p>Everything you need for a great party, from decor to drinks and games.  <\/p>",
+              "link_url": "#",
+              "link_label": "find your scene",
+              "text_colour": "dark",
+              "title_size": "md"
+            }
+          },
+          "e19aada1-0b1e-4560-b97c-25c8138659fa": {
+            "type": "card_item",
+            "settings": {
+              "bg_type": "contain",
+              "bg_image": "shopify:\/\/shop_images\/img2.jpg",
+              "padding": "tight",
+              "bg_color": "#85abbd",
+              "title": "Make it extra.",
+              "content": "<p>Once you’ve chosen a scene, you can dial it up with fun a la carte add-ons.<\/p>",
+              "link_url": "#",
+              "link_label": "shop party supplies",
+              "text_colour": "dark",
+              "title_size": "md"
+            }
+          },
+          "2ee0ca1e-34a1-4783-a024-08d093a0cb4d": {
+            "type": "card_item",
+            "settings": {
+              "bg_type": "contain",
+              "bg_image": "shopify:\/\/shop_images\/img3.jpg",
+              "padding": "tight",
+              "bg_color": "#e3ff21",
+              "title": "Make it joyful.",
+              "content": "<p>Create the arrangement of your dreams with DIY kits from Wild & Flowers.<\/p>",
+              "link_url": "#",
+              "link_label": "shop florals",
+              "text_colour": "dark",
+              "title_size": "md"
+            }
+          },
+          "af0f3819-f4f9-4013-b7a7-a012e6d9178b": {
+            "type": "card_item",
+            "settings": {
+              "bg_type": "contain",
+              "bg_image": "shopify:\/\/shop_images\/img4.jpg",
+              "padding": "tight",
+              "bg_color": "#bf91c4",
+              "title": "Make it happen.",
+              "content": "<p>Need a bartender, caterer, or DJ? Just add  to cart. It’s that easy.<\/p>",
+              "link_url": "#",
+              "link_label": "browse vendors",
+              "text_colour": "dark",
+              "title_size": "md"
+            }
+          }
+        },
+        "block_order": [
+          "8610dbb8-f450-4c97-85f4-bf575d3cbed2",
+          "e19aada1-0b1e-4560-b97c-25c8138659fa",
+          "2ee0ca1e-34a1-4783-a024-08d093a0cb4d",
+          "af0f3819-f4f9-4013-b7a7-a012e6d9178b"
+        ],
+        "settings": {
+          "bg_color": "#f4ede5",
+          "heading": "Having fun 101",
+          "col_count": 4,
+          "layout": "slider"
+        }
+      },
+      "f20aa260-8a3a-4a38-8cb6-23ce44c58385": {
+        "type": "content-cards",
+        "blocks": {
+          "e468258a-41a2-47a6-8fde-e7e7b1fe6cba": {
+            "type": "card_item",
+            "settings": {
+              "bg_type": "covered",
+              "bg_image": "shopify:\/\/shop_images\/img5.jpg",
+              "padding": "loose",
+              "bg_color": "#ffffff",
+              "title": "Housewarming Gifts for the Host",
+              "content": "",
+              "link_url": "#",
+              "link_label": "discover them all",
+              "text_colour": "light",
+              "title_size": "lg"
+            }
+          },
+          "9c5538af-3dc8-4813-a0c9-cea6703697d1": {
+            "type": "card_item",
+            "settings": {
+              "bg_type": "covered",
+              "bg_image": "shopify:\/\/shop_images\/img6.jpg",
+              "padding": "loose",
+              "bg_color": "#ffffff",
+              "title": "The Limited-Edition Holiday Scene",
+              "content": "",
+              "link_url": "#",
+              "link_label": "Shop the scene",
+              "text_colour": "light",
+              "title_size": "lg"
+            }
+          }
+        },
+        "block_order": [
+          "e468258a-41a2-47a6-8fde-e7e7b1fe6cba",
+          "9c5538af-3dc8-4813-a0c9-cea6703697d1"
+        ],
+        "settings": {
+          "bg_color": "#f4ede5",
+          "heading": "",
+          "col_count": 2,
+          "layout": "stacked"
+        }
+      },
+      "aa37abb6-7910-409c-8bbf-45b688f739f9": {
+        "type": "featured-products",
+        "blocks": {
+          "74ea6d2b-f84c-4b87-943b-3ca7430ecf68": {
+            "type": "product",
+            "settings": {
+              "product": "classic-barware"
+            }
+          },
+          "dedf6d4b-1fc9-4bd4-9ebb-6c2c25c8d38b": {
+            "type": "product",
+            "settings": {
+              "product": "figlia-aperitivo"
+            }
+          },
+          "7c0ebbb4-cde4-48db-8fb1-b7589c73228f": {
+            "type": "product",
+            "settings": {
+              "product": "adidas-superstar-80s"
+            }
+          },
+          "97a26e8f-7cfe-43fc-aea5-180f115d40e0": {
+            "type": "product",
+            "settings": {
+              "product": "colored-wine-glasses"
+            }
+          }
+        },
+        "block_order": [
+          "74ea6d2b-f84c-4b87-943b-3ca7430ecf68",
+          "dedf6d4b-1fc9-4bd4-9ebb-6c2c25c8d38b",
+          "7c0ebbb4-cde4-48db-8fb1-b7589c73228f",
+          "97a26e8f-7cfe-43fc-aea5-180f115d40e0"
+        ],
+        "settings": {
+          "bg_color": "#f4ede5",
+          "heading": "Party A la Carte",
+          "link_url": "shopify:\/\/collections\/all",
+          "link_label": "Shop All"
+        }
+      }
+    },
+    "order": [
+      "ba7fca7e-5c3c-4bae-bcee-56792da7bd35",
+      "f20aa260-8a3a-4a38-8cb6-23ce44c58385",
+      "aa37abb6-7910-409c-8bbf-45b688f739f9"
+    ]
+  }
