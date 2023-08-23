@@ -1,9 +1,9 @@
-<section class="featured-products  pt-10 pb-32 overflow-hidden {% if section.settings.bg_color != blank %} bg-[#F4EDE5] {% endif %}">
+<section class="featured-products  pt-10 pb-32 overflow-hidden" style="background-color: {{ section.settings.bg_color }};">
   
   <div class="container mx-auto sm:px-0 lg:px-8">
 
     {% if section.settings.heading != blank %}
-      <h2 class="font-GT text-[80px] uppercase font-normal leading-80 tracking-normal text-center pb-14">{{ section.settings.heading }}</h2>
+      <h2 class="font-GT text-[40px] md:text-9xl uppercase font-normal leading-80 tracking-normal text-center  mb-12 md:mb-24">{{ section.settings.heading }}</h2>
     {% endif %}
 
     <div class="featured-product__items  {% unless section.blocks.size > 3 %} grid gap-[1px] sm:grid-cols-2 md:grid-cols-3 {% endunless %}">
@@ -28,7 +28,7 @@
       "type": "color",
       "id": "bg_color",
       "label": "Background Color",
-      "default": "#fff"
+      "default": "#F4EDE5"
     },
     {
       "type": "text",
