@@ -12,19 +12,24 @@ export function sliderInit() {
       arrows: false,
       dots: false,
       infinite: true,
+      slidesToScroll: 1,
       responsive: [
         {
           breakpoint: 1025,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2
+            slidesToShow: 3
           }
         },
         {
-          breakpoint: 560,
+          breakpoint: 769,
           settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 641,
+          settings: {
+            slidesToShow: 1
           }
         }
       ]

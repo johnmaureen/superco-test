@@ -1,15 +1,28 @@
 .content-cards {
 
   .slick-list {
-    @include breakpoint(560px) {
+    @include breakpoint(640px) {
       padding-right: 90px;
+    }
+
+    &:after {
+      @include breakpoint(640px) {
+        @include rightGradient;
+      }
+    }
+  }
+
+  .slick-track {
+    @include breakpoint(1024px) {
+      display: flex;
     }
   }
 
   .slick-slider {
     .slick-slide {
       @include breakpoint(1024px) {
-        margin: 0 5px;
+        margin: 0 10px 0 0;
+        height: inherit;
       }
     }
   }

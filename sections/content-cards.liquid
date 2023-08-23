@@ -1,12 +1,36 @@
-<section class="content-cards py-16 {{ section.settings.layout }} bg-[{{ section.settings.bg_color }}]">
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8
-    {% if section.settings.layout == 'slider' %} pl-2 pr-0 {% endif %}
-  ">
-    <div class="card-items grid sm:grid-cols-2 lg:grid-cols-{{ section.settings.col_count }} gap-[10px]">
+{%- capture grid_col -%}
 
+  {%- if section.settings.col_count == 4 -%}
+    lg:grid-cols-4
+  {%- elsif section.settings.col_count == 3 -%}
+    lg:grid-cols-3
+  {%- elsif section.settings.col_count == 2 -%}
+    lg:grid-cols-2
+  {%- else -%}
+    lg:grid-cols-1
+  {%- endif %}
+
+{%- endcapture -%}
+
+{%- capture grid_padding -%}
+  {%- if section.settings.layout == "slider" -%}  
+    pl-4 pr-0 sm:pl-4 sm:pr-1 md:px-4
+  {%- else -%}
+    px-4
+  {%- endif -%}
+{%- endcapture -%}
+
+<section class="content-cards py-12 md:py-16 {{ section.settings.layout }}" style="background-color: {{ section.settings.bg_color }};">
+  <div class="container mx-auto sm:px-4 lg:px-8 {{ grid_padding }}">
+
+    {% if section.settings.heading != blank %}
+      <h2 class="font-GT text-[40px] md:text-9xl uppercase font-normal leading-80 tracking-normal text-center  mb-12 md:mb-24">{{ section.settings.heading }}</h2>
+    {% endif %}
+
+    <div class="card-items grid sm:grid-cols-2 {{ grid_col }} gap-[10px]">
       {% render 'card-item' for section.blocks as block %}
-
     </div><!-- card-items -->
+
   </div>
 </section>
 
@@ -19,6 +43,12 @@
       "id": "bg_color",
       "label": "Background Color",
       "default": "#F4EDE5"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "placeholder": "Section heading"
     },
     {
       "type": "range",

@@ -4,3 +4,27 @@
     @content;
   }
 }
+
+@mixin rightGradient {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 14;
+  background-image: linear-gradient(to right,#ffffff00,#f4ede5);
+  right: 0;
+}
+
+@mixin leftGradient {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 14;
+  background-image: linear-gradient(to left,#ffffff00,#f4ede5);
+  left: 0;
+}

@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        GT: ['GT-Super',  'sans-serif'],
+        GT: ['GT-Super', 'sans-serif'],
         Platform: ['Platform', 'sans-serif'],
       },
     },
