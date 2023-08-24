@@ -79,17 +79,42 @@ export function addToCart() {
           type: 'POST',
           dataType: 'json',
           data: formData,
-          success: function (response) {
-            console.log(`${ response.items[0].title } has been added to cart:`);
+          success: response => {
+            console.log(`${ response.items[0].title } has been added to cart:`)
+            showCartObj()
           },
-          error: function (xhr, status, error) {
-            console.error('Failed to add product to cart:', error);
-          },
-        });
+          error: (xhr, status, error) => {
+            console.error('Failed to add product to cart:', error)
+          }
+        })
 
       })
     })
 
   }
+
+}
+
+// Show cart object
+export function showCartObj() {
+
+  $.ajax({
+    type: `GET`,
+    url: `/cart.js`,
+    cache: false,
+    dataType: `json`,
+    success: cart => {
+      // whatever you want to do with the cart obj
+      console.log('Cart', cart)
+   
+      cart.items.forEach(item => {
+        console.table({ 
+          Item: item.title,
+          Quantity: item.quantity
+        })
+      })
+      
+    }
+  });
 
 }
