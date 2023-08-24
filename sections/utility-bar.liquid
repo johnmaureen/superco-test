@@ -1,0 +1,49 @@
+<section class="utility-bar bg-[#85abbd] border-b border-black border-solid hidden md:block">
+  <div class="container mx-auto px-4 sm:px-4 lg:px-8">
+    <div class="flex space-between justify-between items-center py-[1.5rem]">
+
+      {% if section.settings.left_text != blank %}
+          <p class="font-GT italic leading-4 tracking-normal text-[14px] text-black">{{ section.settings.left_text }}</p>
+      {% endif %}
+
+      {% if section.settings.utility_menu != blank %}
+        <div class="utility-menu flex items-center">
+          {% for link in linklists[section.settings.utility_menu].links -%}
+            <a class="font-GT px-5 italic leading-4 tracking-normal text-[14px] text-black" href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          {%- endfor %}
+        </div>
+      {% endif %}
+
+     
+
+    </div>
+  </div>
+</section>
+
+
+
+{% schema %}
+{
+  "name": "Utility Bar",
+  "settings": [
+    {
+      "type": "text",
+      "id": "left_text",
+      "label": "Left text"
+    },
+    {
+      "type": "link_list",
+      "id": "utility_menu",
+      "label": "Menu"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Utility Bar",
+      "name":"Utility Bar"
+    }
+  ]
+}
+{% endschema %}

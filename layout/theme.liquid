@@ -237,8 +237,8 @@
       }
     {% endstyle %}
 
-    {{ 'app.css' | asset_url | stylesheet_tag }}
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'app.css' | asset_url | stylesheet_tag }}
 
     {%- if localization.available_countries.size > 1 or localization.available_languages.size > 1 -%}
       {{ 'component-localization-form.css' | asset_url | stylesheet_tag: preload: true }}

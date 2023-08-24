@@ -208,7 +208,7 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   list-style: none;
 }
 
-.hidden {
+.dn-hidden {
   display: none !important;
 }
 

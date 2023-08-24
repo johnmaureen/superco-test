@@ -1,0 +1,35 @@
+.header-wrapper {
+  background-color: #85ABBD;
+}
+
+header {
+  @include breakpoint(989px) {
+    grid-template-areas: "heading icons left-icons" !important;
+  }  
+
+  &.header--middle-left {
+    grid-template-columns: 1fr auto auto;
+
+    @include breakpoint(989px) {
+      grid-template-columns: auto 1fr auto;
+    }  
+  }
+
+  .header__heading-logo-wrapper {
+    svg {
+      path {
+        fill: #E3FF21;
+      }
+    }
+  }
+
+  .header__icons {
+    @include breakpoint(989px) {
+      padding-right: 2.8rem;
+    }  
+  }
+}
+
+#menu-drawer {
+  background: #85abbd;
+}
