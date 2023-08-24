@@ -6,7 +6,7 @@
       <h2 class="font-GT text-[40px] md:text-9xl uppercase font-normal leading-80 tracking-normal text-center  mb-12 md:mb-24">{{ section.settings.heading }}</h2>
     {% endif %}
 
-    <div class="featured-product__items  {% unless section.blocks.size > 3 %} grid gap-[1px] sm:grid-cols-2 md:grid-cols-3 {% endunless %}">
+    <div class="featured-product__items {% unless section.blocks.size > 3 %} grid gap-[1px] sm:grid-cols-2 md:grid-cols-3 {% endunless %}">
       {% render 'featured-product-item' for section.blocks as block %}
     </div><!-- featured-product__items -->
 
