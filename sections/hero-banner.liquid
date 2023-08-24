@@ -1,0 +1,42 @@
+{% if section.settings.hero_image != blank %}
+  <section 
+    class="hero-banner pb-12 md:pb-16" 
+    style="background-color: {{ section.settings.condensed_bg_color }}"
+    data-alt-bg="{{ section.settings.exploded_bg_color }}"
+  >
+    <img src="{{ section.settings.hero_image | img_url: 'master' }}" class="w-full">
+  </section>
+{% endif %}
+
+
+
+{% schema %}
+{
+  "name": "Hero Banner",
+  "settings": [
+    {
+      "type": "color",
+      "id": "condensed_bg_color",
+      "label": "Condensed Background Color",
+      "default": "#f4ede5"
+    },
+    {
+      "type": "color",
+      "id": "exploded_bg_color",
+      "label": "Exploded Background Color",
+      "default": "#85ABBD"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    }
+  ],
+  "presets": [
+    {
+      "category": "Hero banner",
+      "name":"Hero banner"
+    }
+  ]
+}
+{% endschema %}
