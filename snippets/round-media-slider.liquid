@@ -1,0 +1,13 @@
+<div class="p-15" style="background-color: {{ section.settings.bg_color2 }}">
+        
+  {% if section.settings.heading != blank %}
+    <div class="text-center">{{ section.settings.heading }}</div>
+  {% endif %}
+
+  {%- if section.settings.link_url != blank and section.settings.link_label != blank -%}
+    <a href="{{ section.settings.link_url }}" class="font-Platform font-medium mt-[50px] text-white block text-center underline uppercase tracking-[0.25em]">
+      {{ section.settings.link_label }}
+    </a>
+  {%- endif -%}
+
+</div>
