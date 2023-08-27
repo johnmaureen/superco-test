@@ -1,0 +1,11 @@
+<div class="header-intro exploded py-12 pb-[6rem] flex items-center">
+  <div class="container mx-auto flex px-4 items-center justify-between flex-wrap">
+    {% render 'logo' %}
+
+    {% if section.settings.intro_text != blank %}
+      <div class="intro-text max-w-[330px] pl-8 ">
+        <p class="font-GT text-[18px]">{{ section.settings.intro_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</div>

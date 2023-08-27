@@ -56,6 +56,27 @@
     ]
   },
   {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "radio",
+        "id": "init_state",
+        "label": "Initial State",
+        "default": "exploded",
+        "options": [
+          {
+            "value": "exploded",
+            "label": "Exploded"
+          },
+          {
+            "value": "condensed",
+            "label": "Condensed"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
