@@ -1,21 +1,99 @@
-.header-wrapper {
-  background-color: #85ABBD;
-}
-
-header {
-  @include breakpoint(989px) {
-    grid-template-areas: "heading icons left-icons" !important;
-  }  
-
-  &.header--middle-left {
-    grid-template-columns: 1fr auto auto;
-
-    @include breakpoint(989px) {
-      grid-template-columns: auto 1fr auto;
-    }  
+.section-header {
+  position: relative;
+  
+  .header-wrapper {
+    background-color: #85ABBD;
+    transition: background-color .2s;
   }
 
-  .header__heading-logo-wrapper {
+  &.shopify-section-header-sticky {
+    .header-wrapper {
+      background-color: #F4EDE5;
+    }
+
+    header {
+      background-color: #F4EDE5;
+      .header__heading-logo-wrapper {
+        svg {
+          path {
+            fill: #000;
+          }
+        }
+      }
+    }
+  }
+
+  header {
+    transition: background-color .2s;
+    background-color: #85ABBD;
+    position: relative;
+    z-index: 15;
+
+    @include breakpoint(989px) {
+      grid-template-areas: "heading icons left-icons" !important;
+      position: initial;
+    }  
+  
+    &.header--middle-left {
+      grid-template-columns: 1fr auto auto;
+  
+      @include breakpoint(989px) {
+        grid-template-columns: auto 1fr auto;
+      }  
+    }
+ 
+    // &.header--state__condensed {
+    
+    // }
+
+    &.header--state__exploded {
+      .header__heading-logo-wrapper {
+        opacity: 0;
+      }
+    }
+
+    .header__heading-logo-wrapper {
+      transition: opacity .3s;
+
+      svg {
+        path {
+          transition: fill .3s;
+          fill: #E3FF21;
+        }
+      }
+    }
+  
+    .header__icons {
+      @include breakpoint(989px) {
+        padding-right: 2.8rem;
+      }  
+    }
+  }
+
+  .header-intro {
+    &.exploded {
+      position: absolute;
+      top: 98px;
+      background-color: #85abbd;
+      left: 0;
+      right: 0;
+      width: 100%;
+      margin: auto;
+      transition: top .2s ease-in-out, opacity .3s ease-out;
+      z-index: 14;
+      opacity: 1;
+
+      @include breakpoint(989px) {
+        top: 63px;
+      }
+
+      svg,
+      .header__heading-logo {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
     svg {
       path {
         fill: #E3FF21;
@@ -23,13 +101,25 @@ header {
     }
   }
 
-  .header__icons {
-    @include breakpoint(989px) {
-      padding-right: 2.8rem;
-    }  
+  &.menu-open {
+    header {
+      &.header--state__exploded {
+        .header__heading-logo-wrapper {
+          opacity: 1 !important;
+        }
+      }
+    }
+    
   }
 }
 
 #menu-drawer {
   background: #85abbd;
+  z-index: 15;
+}
+
+.header__icon--menu[aria-expanded=true] {
+  &:before {
+    z-index: 15;
+  }
 }

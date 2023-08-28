@@ -158,7 +158,8 @@
   -%}
 
   </header>
-  <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} container mx-auto px-4 sm:px-4 lg:px-8 {% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
+
+  <header class="header header--state__{{ settings.init_state }} header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} container mx-auto px-4 sm:px-4 lg:px-8 {% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if localization_forms %} header--has-localizations{% endif %}">
     {%- liquid
      
       if section.settings.logo_position == 'top-center' or section.settings.menu == blank
@@ -172,34 +173,7 @@
       {%- endif -%}
           <a href="{{ routes.root_url }}" class="header__heading-link link link--text focus-inset">
             <div class="header__heading-logo-wrapper">
-              {% if settings.logo_type == 'image' %}
-
-                {%- if settings.logo != blank -%}
-
-                    {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
-                    {%- assign logo_height = settings.logo_width | divided_by: settings.logo.aspect_ratio -%}
-                    {% capture sizes %}(max-width: {{ settings.logo_width | times: 2 }}px) 50vw, {{ settings.logo_width }}px{% endcapture %}
-                    {% capture widths %}{{ settings.logo_width }}, {{ settings.logo_width | times: 1.5 | round }}, {{ settings.logo_width | times: 2 }}{% endcapture %}
-                    {{ settings.logo | image_url: width: 600 | image_tag:
-                      class: 'header__heading-logo motion-reduce',
-                      widths: widths,
-                      height: logo_height,
-                      width: settings.logo_width,
-                      alt: logo_alt,
-                      sizes: sizes,
-                      preload: true
-                    }}
-                {%- else -%}
-                  <span class="h2">{{ shop.name }}</span>
-                {%- endif -%}
-
-              {% else %}
-
-                {%- if settings.logo_svg != blank -%}
-                  {{- settings.logo_svg -}}
-                {% endif %}
-                
-              {% endif %}
+              {% render 'logo' %}
             </div><!-- header__heading-logo-wrapper -->
           </a>
       {%- if request.page_type == 'index' -%}
@@ -216,6 +190,7 @@
         endif
       endif
     %}
+
 
     {%- if section.settings.logo_position == 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
@@ -356,6 +331,13 @@
     -%}
 
   </header>
+
+  {% if settings.init_state == 'exploded' %}
+    {% if section.settings.enable_header_intro %}
+      {% render 'header-intro' %}
+    {% endif %}
+  {% endif %}
+
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}
@@ -682,8 +664,8 @@
       "type": "range",
       "id": "padding_top",
       "min": 0,
-      "max": 36,
-      "step": 4,
+      "max": 30,
+      "step": 2,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
       "default": 20
@@ -692,11 +674,26 @@
       "type": "range",
       "id": "padding_bottom",
       "min": 0,
-      "max": 36,
-      "step": 4,
+      "max": 30,
+      "step": 2,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Header Intro Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_header_intro",
+      "label": "Enable Header Intro",
+      "default": true
+    },
+    {
+      "type": "textarea",
+      "id": "intro_text",
+      "label": "Intro Text"
     }
   ],
   "blocks": [
