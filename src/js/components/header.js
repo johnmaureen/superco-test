@@ -25,7 +25,19 @@ export function headerIntroToggle() {
       const initialPosition = 98
       const height = defaults.intro.offsetHeight
 
-      defaults.intro.style.top = position > target ? `-${height}px` : `${defaults.header.offsetHeight}px`
+      // defaults.intro.style.top = position > target ? `-${height}px` : `${defaults.header.offsetHeight}px`
+
+      if (position > target) {
+        defaults.intro.style.cssText = `
+          top: -${height}px;
+          opacity: 0;
+        `
+      } else {
+        defaults.intro.style.cssText = `
+          top: ${defaults.header.offsetHeight}px;
+          opacity: 1;
+        `
+      }
     }
   }
 
