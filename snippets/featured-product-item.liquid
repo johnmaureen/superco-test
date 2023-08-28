@@ -3,7 +3,12 @@
 <div class="product-item bg-white" data-id="{{ product.first_available_variant.id }}">
 
     <div class="block h-[81%] w-full">
-        <div class="product-image block bg-no-repeat bg-center bg-cover h-full w-full pb-[70%]" alt="{{ product.featured_image.alt | escape }}" style="background-image: url({{ product.featured_image.src | img_url: 'master' }})"></div>
+        <div 
+            class="product-image block bg-no-repeat bg-center bg-cover h-full w-full pb-[70%] lazy" 
+            alt="{{ product.featured_image.alt | escape }}" 
+            style="background-image: url({{ product.featured_image.src | img_url: 'x50' }})"
+            data-bg="{{ product.featured_image.src | img_url: 'master' }}">
+        </div>
 	</div>
 
     <div class="flex justify-between items-start p-5">

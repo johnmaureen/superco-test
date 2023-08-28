@@ -6,7 +6,10 @@
 
   <div class="round-media__slider mx-auto block max-w-[250px]">
     {% for block in section.blocks %}
-      <img src="{{ block.settings.image | img_url: '300x' }}" class="h-[180px] w-[180px] max-w-[180px] rounded-full">
+      <img 
+        src="{{ block.settings.image | img_url: '50x' }}" 
+        data-src="{{ block.settings.image | img_url: '300x' }}" 
+        class="h-[180px] w-[180px] max-w-[180px] rounded-full lazy">
     {% endfor %}
   </div>
 

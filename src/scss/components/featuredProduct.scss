@@ -1,5 +1,14 @@
 .featured-products {
 
+  .featured-product__items {
+    opacity: 0;
+    transition: opacity .2s;
+
+    &.slick-initialized {
+      opacity: 1;
+    }
+  }
+
   .slick-slider {
 
     .slick-list {
