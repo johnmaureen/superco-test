@@ -26,4 +26,21 @@
       }
     }
   }
+
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
+    z-index: 15;
+
+    &:before {
+      opacity: 1;
+      content: '';
+    }
+  }
+
+  .slick-next {
+    background: url('./arrow-right-round.svg') no-repeat center / contain !important;
+    right: 15px;
+  }
+
 }

@@ -9,7 +9,7 @@ export function sliderInit() {
 
   if (window.innerWidth <= 1024) {
     $('.content-cards.slider .card-items').slick({
-      arrows: false,
+      arrows: true,
       dots: false,
       infinite: true,
       slidesToScroll: 1,
