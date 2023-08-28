@@ -1,0 +1,24 @@
+{%- capture background -%}
+  {% if section.settings.bg_color1 != blank %}
+    background-color: {{ section.settings.bg_color1 }};
+  {% endif %}
+
+  {% if section.settings.bg_image != blank %}
+    background-image: url({{ section.settings.bg_image | img_url: 'master' }});
+  {% endif %}
+{%- endcapture -%}
+
+<div class="p-20 bg-no-repeat bg-center bg-cover" style="{{ background }}">
+        
+  {% if section.settings.image != blank %}
+    <img 
+      data-src="{{ section.settings.image | img_url: 'master' }}" 
+      src="{{ section.settings.image | img_url: 'x20' }}"
+      class="pb-6 mx-auto max-w-[190px] lazy">
+  {% endif %}
+
+  {% if section.settings.content != blank %}
+    <p class="font-GT text-[40px] leading-[44px] text-center" style="color: {{ section.settings.content_color }}">{{ section.settings.content }}</p>
+  {% endif %}
+
+</div>

@@ -1,0 +1,97 @@
+<section class="two-column-content py-12" style="background-color: {{ section.settings.section_bg_color }}">
+  <div class="container mx-auto px-4 sm:px-4 lg:px-8 grid-cols-1 block md:hidden">
+    
+    {% render 'image-text-banner', section: section %}
+    {% render 'round-media-slider', section: section %}
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Two Row Content",
+  "settings": [
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background Color",
+      "default": "#f4ede5"
+    },
+    {
+      "type": "header",
+      "content": "First Row Settings"
+    },
+    {
+      "type": "color",
+      "id": "bg_color1",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "textarea",
+      "id": "content",
+      "label": "Content"
+    },
+    {
+      "type": "color",
+      "id": "content_color",
+      "label": "Content Color",
+      "default": "#E3FF21"
+    },
+    {
+      "type": "header",
+      "content": "Second Row Settings"
+    },
+    {
+      "type": "color",
+      "id": "bg_color2",
+      "label": "Background Color",
+      "default": "#730503"
+    },
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link Label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slider_item",
+      "name": "Slider Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "category": "Two Row Content",
+      "name":"Two Row Content"
+    }
+  ]
+}
+{% endschema %}

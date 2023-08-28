@@ -1,3 +1,16 @@
+
+// Globals
+@import 'fonts';
+@import 'mixins';
+
+
+// Components
+@import './components/header.scss';
+@import './components/featuredProduct.scss';
+@import './components/contentCards.scss';
+@import './components/roundMedia.scss';
+@import './components/footer.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

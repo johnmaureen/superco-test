@@ -1,0 +1,51 @@
+.round-media-section {
+
+  .heading {
+    font-family: "Platform", sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: Platform;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+
+    em {
+      font-family: 'GT-Super' ,sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 24px;
+      margin-left: 10px;
+      text-transform: initial;
+    }
+  }
+
+  .round-media__slider {
+    .slick-slide {
+      text-align: center;
+    }
+  }
+
+  .slick-arrow {
+    width: 31px;
+    height: 16px;
+    z-index: 14;
+    @include breakpoint(640px) {
+      display: none;
+    }
+
+    &:before {
+      opacity: 1;
+      content: '';
+    }
+  }
+
+  .slick-prev {
+    background: url('./arrow-left-white.svg') no-repeat center / contain !important;
+    left: -20px;
+  }
+
+  .slick-next {
+    background: url('./arrow-right-white.svg') no-repeat center / contain !important;
+    right: -20px;
+  }
+}

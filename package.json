@@ -23,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/johnmaureen/superco-test/issues"
   },
-  "homepage": "https://github.com/johnmaureen/superco-test#readme"
+  "homepage": "https://github.com/johnmaureen/superco-test#readme",
+  "dependencies": {
+    "jquery": "^3.7.0",
+    "slick-carousel": "^1.8.1",
+    "vanilla-lazyload": "^17.8.4"
+  }
 }

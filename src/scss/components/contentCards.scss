@@ -1,0 +1,46 @@
+.content-cards {
+
+  .slick-list {
+    @include breakpoint(640px) {
+      padding-right: 90px;
+    }
+
+    &:after {
+      @include breakpoint(640px) {
+        @include rightGradient;
+      }
+    }
+  }
+
+  .slick-track {
+    @include breakpoint(1024px) {
+      display: flex;
+    }
+  }
+
+  .slick-slider {
+    .slick-slide {
+      @include breakpoint(1024px) {
+        margin: 0 10px 0 0;
+        height: inherit;
+      }
+    }
+  }
+
+  .slick-arrow {
+    width: 30px;
+    height: 30px;
+    z-index: 15;
+
+    &:before {
+      opacity: 1;
+      content: '';
+    }
+  }
+
+  .slick-next {
+    background: url('./arrow-right-round.svg') no-repeat center / contain !important;
+    right: 15px;
+  }
+
+}

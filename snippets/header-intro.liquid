@@ -1,0 +1,13 @@
+<div class="header-intro exploded py-12 pb-[6rem] flex items-center">
+  <div class="container mx-auto flex px-4 items-center justify-between flex-wrap">
+    <div class="mx-auto md:mx-0 pb-[20px] md:pb-0 min-w-full md:min-w-[50%] lg:min-w-[67%]">
+      {% render 'logo' %}
+    </div>
+
+    {% if section.settings.intro_text != blank %}
+      <div class="intro-text max-w-[262px] sm:max-w-[330px] pl-0 sm:pl-8 m-0 ml-auto">
+        <p class="font-GT text-[16px] md:text-[18px]">{{ section.settings.intro_text }}</p>
+      </div>
+    {% endif %}
+  </div>
+</div>

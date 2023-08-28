@@ -2,3 +2,5 @@
 .DS_Store?
 ._*
 node_modules
+assets/app.css
+assets/app.js

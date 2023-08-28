@@ -11,9 +11,31 @@
     "name": "t:settings_schema.logo.name",
     "settings": [
       {
+        "type": "radio",
+        "id": "logo_type",
+        "label": "Logo Type",
+        "default": "image",
+        "info": "Choose a logo type you want to appear in the header",
+        "options": [
+          {
+            "value": "image",
+            "label": "Image"
+          },
+          {
+            "value": "svg",
+            "label": "SVG"
+          }
+        ]
+      },
+      {
         "type": "image_picker",
         "id": "logo",
         "label": "t:settings_schema.logo.settings.logo_image.label"
+      },
+      {
+        "type": "textarea",
+        "id": "logo_svg",
+        "label": "Logo SVG"
       },
       {
         "type": "range",
@@ -30,6 +52,27 @@
         "id": "favicon",
         "label": "t:settings_schema.logo.settings.favicon.label",
         "info": "t:settings_schema.logo.settings.favicon.info"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "type": "radio",
+        "id": "init_state",
+        "label": "Initial State",
+        "default": "exploded",
+        "options": [
+          {
+            "value": "exploded",
+            "label": "Exploded"
+          },
+          {
+            "value": "condensed",
+            "label": "Condensed"
+          }
+        ]
       }
     ]
   },
