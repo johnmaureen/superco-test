@@ -16,7 +16,6 @@ export function headerIntroToggle() {
     }
   }
 
-  console.log('offsetTop', offsetTop())
 
   // Hide/show intro block based on scroll position
   const onIntroToggle = position => {
@@ -24,8 +23,6 @@ export function headerIntroToggle() {
       const target = 40
       const initialPosition = 98
       const height = defaults.intro.offsetHeight
-
-      // defaults.intro.style.top = position > target ? `-${height}px` : `${defaults.header.offsetHeight}px`
 
       if (position > target) {
         defaults.intro.style.cssText = `
@@ -48,10 +45,8 @@ export function headerIntroToggle() {
   } 
 
   const onScroll = () => {
-
     // Get scroll position
     const position = window.scrollY;
-    console.log(`Scroll position: ${position}`);
 
     onToggleLogo(position)
     onIntroToggle(position)

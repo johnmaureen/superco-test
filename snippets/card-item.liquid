@@ -36,7 +36,9 @@
 		style="{{ background }}">
 
 		{%- if block.settings.bg_type == 'contain' -%}
-			<div class="card-image block bg-no-repeat bg-center bg-cover mb-[30px] pb-[72%] w-full" style="background-image: url({{ block.settings.bg_image | img_url: 'master'}})"></div>
+			<div 
+				data-bg="{{ block.settings.bg_image | img_url: 'master'}}"
+				class="card-image block bg-no-repeat bg-center bg-cover mb-[30px] pb-[72%] w-full lazy" style="background-image: url({{ block.settings.bg_image | img_url: 'x70'}})"></div>
 		{%- endif -%}
 
 		<div class="card-content text-center max-w-[615px] mx-auto {{ text_color }}">
