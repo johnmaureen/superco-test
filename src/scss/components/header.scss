@@ -26,8 +26,9 @@
 
     .header-intro {
       transition: .4s ease-out;
-      padding: 0;
       height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
 
       svg,
       .header__heading-logo {
@@ -45,6 +46,31 @@
       margin-top: -77px;
       scale: .27;
       left: 20px;
+
+      @include breakpoint(1023px) {
+        margin-top: -135px;
+        scale: .3;
+        left: 20px;
+      }
+
+      @include breakpoint(989px) {
+        margin-bottom: 20px;
+        margin-top: -78px;
+        left: 0;
+      }
+
+      @include breakpoint(767px) {
+        margin-top: -46px;
+        scale: .2;
+      }
+
+      @include breakpoint(767px) {
+        scale: .2;
+      }
+
+      @include breakpoint(540px) {
+        scale: .3;
+      }
     }
 
     .intro-text {
@@ -52,6 +78,10 @@
       transition: opacity .21s ease-out;
       top: -45px;
       position: relative;
+      
+      @include breakpoint(989px) {
+        top: 0;
+      }
     }
 
   }
@@ -76,7 +106,7 @@
   header {
     height: 100px;
     @include breakpoint(989px) {
-      grid-template-areas: "heading icons left-icons" !important;
+      grid-template-areas: "icons left-icons heading"!important;
       position: initial;
       height: 60px;
     }  
@@ -85,7 +115,7 @@
       grid-template-columns: 1fr auto auto;
   
       @include breakpoint(989px) {
-        grid-template-columns: auto 1fr auto;
+        grid-template-columns: 1fr;
       }  
     }
 
@@ -111,6 +141,10 @@
 #menu-drawer {
   background: #85abbd;
   z-index: 15;
+  position: fixed;
+  left: 0;
+  top: 58px;
+  height: 100%;
 }
 
 .header__icon--menu[aria-expanded=true] {
