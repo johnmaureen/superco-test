@@ -1,10 +1,10 @@
 {% if section.settings.hero_image != blank %}
   <section 
-    class="hero-banner pb-12 md:pb-16" 
+    class="hero-banner pb-12 md:pb-16 {% if settings.init_state == 'exploded' %} exploded {% endif %}" 
     style="background-color: {{ section.settings.condensed_bg_color }}"
     data-alt-bg="{{ section.settings.exploded_bg_color }}"
   >
-    <img src="{{ section.settings.hero_image | img_url: 'x100' }}" data-src="{{ section.settings.hero_image | img_url: 'master' }}" class="w-full lazy">
+    <img src="{{ section.settings.hero_image | img_url: 'x100' }}" data-src="{{ section.settings.hero_image | img_url: 'master' }}" class="w-full mx-auto lazy">
   </section>
 {% endif %}
 
