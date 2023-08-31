@@ -3,9 +3,16 @@
   
   .header-wrapper {
     background-color: #85ABBD;
-    transition: background-color .2s;
+    transition: .3s ease;
+    // height: 100px;
 
     &.exploded {
+      // height: 350px;
+
+      header {
+        margin-bottom: 0;
+      }
+
       .header-intro {
         padding-top: 2rem;
         padding-bottom: 5rem;
@@ -13,22 +20,37 @@
       }
 
       .logo-wrapper {
-        scale: 1;
         left: auto;
         margin-top: auto;
+        bottom: 0;
+        width: 65%;
+
+        @include breakpoint(1023px) {
+          width: 50%;
+        }
+
+        @include breakpoint(767px) {
+          width: 100%;
+          margin-bottom: 20px;
+        }
       }
 
       .intro-text {
         opacity: 1;
         top: 0;
+        height: auto;
+        overflow: hidden;
+
       }
+
     }
 
     .header-intro {
       transition: .4s ease-out;
-      height: 0;
       padding-top: 0;
       padding-bottom: 0;
+      // top: -245px;
+      position: relative;
 
       svg,
       .header__heading-logo {
@@ -43,44 +65,40 @@
 
     .logo-wrapper {
       transition: .3s ease-out;
-      margin-top: -77px;
-      scale: .27;
-      left: 20px;
+      bottom: 25px;
+      width: 180px;
 
       @include breakpoint(1023px) {
-        margin-top: -135px;
-        scale: .3;
-        left: 20px;
+        bottom: 25px;
       }
 
       @include breakpoint(989px) {
-        margin-bottom: 20px;
-        margin-top: -78px;
-        left: 0;
+        width: 105px;
+        bottom: -5px;
       }
-
-      @include breakpoint(767px) {
-        margin-top: -46px;
-        scale: .2;
-      }
-
-      @include breakpoint(767px) {
-        scale: .2;
-      }
-
-      @include breakpoint(540px) {
-        scale: .3;
-      }
+     
     }
 
     .intro-text {
       opacity: 0;
-      transition: opacity .21s ease-out;
-      top: -45px;
+      transition: opacity .2s ease-out;
+      top: -25px;
       position: relative;
+      height: 0;
       
       @include breakpoint(989px) {
         top: 0;
+      }
+    }
+
+    header {
+      overflow-x: hidden;
+      transition: .3s ease;
+      margin-bottom: -50px;
+      z-index: -1;
+
+      @include breakpoint(1023px) {
+        margin-bottom: -50px;
       }
     }
 
@@ -89,6 +107,11 @@
   &.shopify-section-header-sticky {
     .header-wrapper {
       background-color: #F4EDE5;
+      height: 100px;
+
+      @include breakpoint(989px) {
+        height: 60px;
+      }
     }
 
     .header-intro {
@@ -126,16 +149,6 @@
     }
   }
 
-  &.menu-open {
-    header {
-      &.header--state__exploded {
-        .header__heading-logo-wrapper {
-          opacity: 1 !important;
-        }
-      }
-    }
-    
-  }
 }
 
 #menu-drawer {

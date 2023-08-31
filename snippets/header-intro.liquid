@@ -1,11 +1,11 @@
 <div class="header-intro container mx-auto flex px-4 items-center justify-between flex-wrap w-full">
-  <div class="logo-wrapper h-auto left-0 mt-0 relative transform origin-top-left transition duration-300 ease-out min-w-full md:min-w-[50%] lg:min-w-[65%]">
+  <div class="logo-wrapper h-auto left-0 mt-0 relative transform origin-top-left">
     {% render 'logo' %}
   </div>
 
   {% if section.settings.intro_text != blank %}
     <div class="intro-text max-w-[262px] sm:max-w-[330px] pl-0 sm:pl-8 m-0 ml-auto">
-      <p class="font-GT text-[16px] md:text-[18px]">{{ section.settings.intro_text }}</p>
+      <p class="font-GT text-[16px] md:text-[18px] line-[24px]">{{ section.settings.intro_text }}</p>
     </div>
   {% endif %}
 </div>
